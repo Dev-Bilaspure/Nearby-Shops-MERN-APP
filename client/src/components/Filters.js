@@ -8,7 +8,7 @@ import { actionCreators } from '../state/index';
 
 const Filters = () => {
   const dispatch = useDispatch();
-  const {setAllShops, addNewShop} = bindActionCreators(actionCreators, dispatch);
+  const {setAllShops} = bindActionCreators(actionCreators, dispatch);
   const [areaFilter, setAreaFilter] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('');
   const [openCloseFilter, setOpenCloseFilter] = useState('');

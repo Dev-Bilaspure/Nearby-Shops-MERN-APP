@@ -12,7 +12,7 @@ const ShopCards = () => {
           shops.map(shp => {
             return(
               <Grid item key={shp._id} lg={3} md={4} sm={6} xs={12}>
-                <ShopCard name={shp.name} area={shp.area} category={shp.category} open={shp.open}/>
+                <ShopCard shopId={shp._id} name={shp.name} area={shp.area} category={shp.category} open={shp.open}/>
               </Grid>
             )
           })

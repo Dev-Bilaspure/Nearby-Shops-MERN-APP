@@ -16,6 +16,18 @@ const addShop = async (req, res) => {
   }
 }
 
+const deleteShop = async (req, res) => {
+  try {
+    const shop = await Shop.findById(req.params.id);
+    console.log(shop);
+    await shop.delete();
+    res.status(200).json("Post has been deleted...");
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+}
+
 const getShops = async (req, res) => {
   try {
     const { areaFilter, categoryFilter, openCloseFilter } = req.body;
@@ -43,5 +55,5 @@ const getShops = async (req, res) => {
 module.exports = {
   addShop,
   getShops,
-  // sayHello
+  deleteShop
 }
