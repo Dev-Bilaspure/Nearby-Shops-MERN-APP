@@ -48,6 +48,10 @@ const AddShopDialog = ({handleDialogBoxClose, openDialogBox}) => {
       }).then(res => {
         addNewShop(res.data);
         setIsFetching(false);
+        setName('');
+        setArea('');
+        setCategory('');
+        setOpenDays([]);
         handleDialogBoxClose();
       }).catch(err => {
         setIsFetching(false);
