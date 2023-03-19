@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors())
 
 // connect mongodb
-const URL = process.env.MONGODB_URL;
+const URL = process.env.MONGODB_URL || "mongodb://localhost:27017/nearby-shops";
 mongoose.connect(URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
